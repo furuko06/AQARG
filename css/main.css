@@ -1,9 +1,17 @@
-body {
-  margin: 0;
+:root {
+  --primary-color: #e9c96d;
+  --secondary-color: black;
+}
+
+* {
   padding: 0;
-  background: white;
-  height: 100%;
-  width: 100%;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--primary-color);
+  height: 100vh;
 }
 
 .home {
@@ -13,7 +21,7 @@ body {
   background: grey;
   background-image: url("../img/Portada.JPG");
   background-repeat: no-repeat;
-  background-position: auto;
+  background-position: center;
   background-size: cover;
   margin-bottom: 0;
 }
@@ -35,88 +43,94 @@ body {
   font-size: 5em;
   margin-left: 0.5em;
   position: absolute;
-  top: 20%;
+  top: 10%;
   width: 4.5em;
-  left: 0.5em;
+  left: 1em;
   display: block;
+  text-shadow: 1px -2px 14px rgba(0, 0, 0, 0.8);
 }
 .home p {
-  color: goldenrod;
+  color: var(--primary-color);
   font-size: 1.5em;
   font-weight: 400;
   margin-left: 1em;
   margin-top: 2em;
   position: absolute;
-  top: 14em;
-  left: 2.5em;
+  top: 11.5em;
+  left: 4em;
   display: inline;
 }
 .home a {
-  border: 3.5px goldenrod solid;
+  border: 3.5px var(--primary-color);
   padding: 5px;
-  color: goldenrod;
+  color: var(--primary-color);
   font-size: 1.5em;
   text-shadow: 2px;
   font-weight: 300;
   position: absolute;
-  top: 14.5em;
-  margin-left: 1em;
+  top: 12.3em;
+  margin-left: 0.5em;
   margin-top: 1em;
-  left: 14em;
+  left: 16em;
   text-decoration: none;
   display: inline;
 }
 
 .suscribite:hover {
-  background: goldenrod;
-  color: black;
-  border: 3.5px solid goldenrod;
+  background: var(--primary-color);
+  color: var(--secondary-color);
+  border: 3.5px solid var(--primary-color);
+  border-radius: 5px;
 }
 
 .about {
-  background: goldenrod;
+  background: var(--primary-color);
   height: 33em;
-  border-top: 1px solid black;
+  border-top: 1px solid var(--secondary-color);
+}
+.about a {
+  text-decoration: none;
+  font-size: 1.1em;
+  margin-left: 0.5rem;
+  color: var(--secondary-color);
 }
 .about img {
   width: 5.5em;
   height: 5.5em;
   border-radius: 20%;
   padding: 5px;
-  background-color: white;
+  background-color: var(--secondary-color);
   position: relative;
   top: 4em;
   margin-bottom: 2em;
   box-shadow: 0 0 0 2px;
 }
 .about p {
-  margin-left: 4.2em;
-  top: 11em;
-  position: relative;
-  left: 6em;
-  width: 50vw;
+  top: 48.5rem;
+  position: absolute;
+  left: 10em;
 }
 
 .about > h2 {
   font-size: 2em;
   margin-left: 5em;
-  top: 6em;
+  top: 5em;
   position: relative;
+  width: 50%;
 }
 
 .primary-nav {
   position: absolute;
-  right: 18em;
+  right: 30em;
   top: 35em;
-}
-.primary-nav li {
-  top: 1em;
+  list-style: none;
 }
 
 .teams {
   height: 33em;
-  border-top: 1px solid black;
-  background: goldenrod;
+  border-top: 1px solid var(--secondary-color);
+  background: var(--primary-color);
+  position: relative;
 }
 .teams img {
   width: 50em;
@@ -126,39 +140,120 @@ body {
 }
 .teams .equipos {
   font-size: 2em;
-  top: 40em;
+  top: 13.5rem;
   position: absolute;
   left: 7em;
-  color: goldenrod;
-  font-weight: 400;
+  color: var(--primary-color);
+  font-weight: 600;
+  text-transform: capitalize;
+  text-shadow: 1px -2px 14px rgb(0, 0, 0);
 }
 .teams .lista-equipos {
+  top: 5em;
   position: absolute;
-  left: 50em;
-  grid-column: auto;
+  list-style: none;
+  right: 0;
+  width: 40em;
+  height: auto;
+  overflow: hidden;
+}
+.teams .lista-equipos a {
+  text-decoration: none;
+  font-size: 1.1em;
+  color: var(--secondary-color);
+  text-align: center;
 }
 
 .events {
   border-top: 1px solid black;
-  background: goldenrod;
+  background: var(--primary-color);
+  height: 33em;
+  width: 100%;
+  position: relative;
+}
+.events div {
+  left: 50em;
+  position: absolute;
+  top: 0.5em;
+}
+.events div ul {
+  list-style: none;
+}
+.events div ul li {
+  color: var(--secondary-color);
+}
+.events div ul a {
+  text-decoration: none;
+  font-size: 1.1em;
+  color: var(--secondary-color);
+  margin-left: 0.5rem;
+}
+.events div img {
+  width: 5.5em;
+  height: 5.5em;
+  border-radius: 20%;
+  padding-top: 5px;
+  background-color: var(--secondary-color);
+  position: relative;
+  top: 4em;
+  margin-bottom: 2em;
+  box-shadow: 0 0 0 2px;
+}
+.events p {
+  position: absolute;
+  top: 7em;
+  font-size: 2em;
+  color: var(--primary-color);
+  font-weight: 600;
+  text-shadow: 1px -2px 14px rgb(0, 0, 0);
+  left: 7em;
 }
 
 .cds {
-  width: 50em;
+  width: 50rem;
   height: 100%;
   position: relative;
   left: -10em;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .join {
   display: block;
-  background: goldenrod;
-  border-top: 1px solid black;
+  background: var(--primary-color);
+  border-top: 0.5px solid var(--secondary-color);
+  width: 100%;
+  height: 33em;
+  position: relative;
 }
-.join img {
-  width: 7em;
-  height: 7em;
+.join .decoracion {
+  background-color: var(--secondary-color);
+  height: 33em;
+  width: 10%;
+  position: relative;
+}
+.join .texto {
+  left: 50em;
   position: absolute;
-  right: 3em;
-  top: 3em;
+  top: 5em;
+}
+.join .texto h2 {
+  font-size: 3em;
+  right: 1em;
+  top: -0.5em;
+  position: relative;
+}
+.join .texto p {
+  position: relative;
+  right: 0;
+}
+.join .logo-inicio {
+  width: 9rem;
+  height: 9rem;
+  position: relative;
+  right: -3.5em;
+  top: -17em;
+  background-color: white;
+  border-radius: 50%;
+  padding: 5px;
 }/*# sourceMappingURL=main.css.map */
